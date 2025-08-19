@@ -70,13 +70,11 @@ router.get('/posts/edit/:id', isAuthenticated, async (req, res) => {
         where: { id: parseInt(req.params.id) },
         include: { categories: { include: { category: true } } }
     });
-    // *** FIX: Parse sources string back to JSON for the editor ***
     if (post && post.sources) {
         try {
             post.sources = JSON.parse(post.sources);
         } catch (e) {
-            console.error("Error parsing sources JSON:", e);
-            post.sources = []; // Default to empty array on error
+            post.sources = [];
         }
     }
     const categories = await prisma.category.findMany();
@@ -92,25 +90,17 @@ router.post('/posts', isAuthenticated, upload.single('coverImage'), async (req, 
         .filter(Boolean)
         .map(catId => ({ categoryId: parseInt(catId) }));
 
-    // *** FIX: Process and stringify sources before saving ***
     const sources = source_labels && source_urls ? source_labels
         .map((label, index) => ({ label, url: source_urls[index] }))
         .filter(source => source.label && source.url) : [];
 
     await prisma.post.create({
         data: {
-            title,
-            slug,
-            excerpt,
-            body,
-            status,
-            coverImageUrl,
-            sources: JSON.stringify(sources), // Convert to string
+            title, slug, excerpt, body, status, coverImageUrl,
+            sources: JSON.stringify(sources),
             authorId: req.session.userId,
             publishedAt: status === 'published' ? new Date() : null,
-            categories: {
-                create: categoryConnect,
-            },
+            categories: { create: categoryConnect },
         },
     });
     res.redirect('/admin/posts');
@@ -121,14 +111,13 @@ router.post('/posts/edit/:id', isAuthenticated, upload.single('coverImage'), asy
     const postId = parseInt(req.params.id);
     const { title, slug, excerpt, body, status, categories, source_labels, source_urls } = req.body;
     
-    // *** FIX: Process and stringify sources before saving ***
     const sources = source_labels && source_urls ? source_labels
         .map((label, index) => ({ label, url: source_urls[index] }))
         .filter(source => source.label && source.url) : [];
 
     let dataToUpdate = {
         title, slug, excerpt, body, status,
-        sources: JSON.stringify(sources), // Convert to string
+        sources: JSON.stringify(sources),
         publishedAt: status === 'published' ? new Date() : null,
     };
 
