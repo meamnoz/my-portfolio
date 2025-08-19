@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal website of Meysam Norouzi, active in the field of international trade and the implementation of artificial intelligence in commerce.">
     <title>Meysam Norouzi - International Trader</title>
-    <!-- Favicon: Please add a file named 'logo-icon.png' to your project folder -->
-    <link rel="icon" type="image/jpeg" href="logo-icon.png">
+    <link rel="icon" type="image/png" href="logo-icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,10 +45,9 @@
         }
         section {
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-            padding-top: 4rem; /* Add padding for the fixed logo on mobile */
+            padding-top: 5rem; /* Increased padding for mobile header */
             padding-bottom: 4rem;
         }
-        /* Blog Modal Styles */
         .modal {
             transition: opacity 0.3s ease;
         }
@@ -60,7 +58,38 @@
             background-color: #001f3f; /* Deep navy blue */
         }
         .post-card {
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .post-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        /* New Blog Filter Styles */
+        .sort-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            color: #4b5563;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .sort-btn.active {
+            background-color: #ffffff;
+            color: #007bff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        /* New Service Card Styles */
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -73,8 +102,9 @@
         <header class="hidden lg:block lg:w-24 lg:h-screen lg:fixed lg:top-0 lg:left-0 lg:flex lg:flex-col lg:items-center p-4 z-50">
             <!-- Logo -->
             <a href="#home" class="mb-8">
+                <!-- LOGO BORDER CHANGE: Image width/height adjusted for a thinner border -->
                 <div class="w-16 h-16 rounded-full logo-container flex items-center justify-center shadow-lg">
-                    <img src="logo mn.jpg" alt="Logo" class="w-14 h-14 rounded-full object-cover">
+                    <img src="logo mn.jpg" alt="Logo" class="w-[3.75rem] h-[3.75rem] rounded-full object-cover">
                 </div>
             </a>
             <!-- Navigation -->
@@ -93,13 +123,13 @@
         <!-- Mobile Header with Logo -->
         <div class="lg:hidden fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm shadow-sm p-4 z-50 flex items-center">
              <a href="#home">
+                <!-- LOGO BORDER CHANGE: Image width/height adjusted for a thinner border -->
                 <div class="w-12 h-12 rounded-full logo-container flex items-center justify-center shadow-lg">
-                    <img src="logo mn.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+                    <img src="logo mn.jpg" alt="Logo" class="w-11 h-11 rounded-full object-cover">
                 </div>
             </a>
             <h1 class="text-xl font-bold text-gray-800 ml-4">Meysam Norouzi</h1>
         </div>
-
 
         <!-- Main Content -->
         <main class="lg:ml-24 flex-1">
@@ -133,42 +163,102 @@
                 </div>
             </section>
 
-            <!-- Services Section -->
-            <section id="services" class="min-h-screen flex items-center p-6 lg:p-16 bg-white">
-                <div class="max-w-4xl mx-auto w-full">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-12 flex items-center">
-                        <i data-lucide="briefcase" class="w-8 h-8 mr-3 text-blue-500"></i>
-                        My Services
-                    </h2>
-                    <div class="grid md:grid-cols-2 gap-10">
-                        <!-- Export Services -->
-                        <div class="bg-gray-50 p-8 rounded-xl shadow-md">
-                            <h3 class="text-2xl font-semibold text-gray-700 mb-4 flex items-center"><i data-lucide="arrow-up-right" class="w-6 h-6 mr-2 text-green-500"></i>Export Services</h3>
-                            <ul class="space-y-3 text-gray-600 list-disc list-inside">
-                                <li>Market Analysis & Product Sourcing</li>
-                                <li>Supplier Negotiation & Vetting</li>
-                                <li>Logistics & Shipment Coordination</li>
-                                <li>Customs Clearance & Documentation</li>
-                                <li>Quality Control & Inspection</li>
+            <!-- SERVICES SECTION: Completely redesigned with new content -->
+            <section id="services" class="min-h-screen p-6 lg:p-16 bg-gray-50">
+                <div class="max-w-5xl mx-auto w-full">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center">
+                            <i data-lucide="briefcase" class="w-8 h-8 mr-3 text-blue-500"></i>
+                            My Professional Services
+                        </h2>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">In today's world, businesses require specialized services to succeed in international markets. I provide a diverse range to help you achieve your objectives.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Service Card 1: Export Marketing -->
+                        <div class="service-card">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="target" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800">Export Marketing</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">I assist companies in identifying new markets and increasing their international sales.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Access to new markets and increased sales.</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Enhanced brand recognition internationally.</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Reduced risks associated with market entry.</span></li>
                             </ul>
                         </div>
-                        <!-- Import Services -->
-                        <div class="bg-gray-50 p-8 rounded-xl shadow-md">
-                            <h3 class="text-2xl font-semibold text-gray-700 mb-4 flex items-center"><i data-lucide="arrow-down-left" class="w-6 h-6 mr-2 text-red-500"></i>Import Services</h3>
-                            <ul class="space-y-3 text-gray-600 list-disc list-inside">
-                                <li>International Market Entry Strategy</li>
-                                <li>Buyer Identification & Outreach</li>
-                                <li>Trade Finance & Payment Solutions</li>
-                                <li>Compliance with International Standards</li>
-                                <li>After-Sales Support & Relationship Management</li>
+                        <!-- Service Card 2: Correspondence & Negotiation -->
+                        <div class="service-card">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="message-square" class="w-6 h-6 text-teal-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800">Correspondence & Negotiation</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">I offer commercial correspondence and negotiation services for effective and professional communication with international partners.</p>
+                             <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Increased efficiency in business communications.</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Improved negotiation outcomes.</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Reduced commercial risks.</span></li>
                             </ul>
+                        </div>
+                         <!-- Service Card 3: Legal Affairs -->
+                        <div class="service-card">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="gavel" class="w-6 h-6 text-indigo-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800">Legal Affairs</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">I provide consulting and support in negotiating international trade agreements to help you secure favorable contracts.</p>
+                             <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Ensured compliance with international laws.</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Reduced legal and contractual risks.</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Increased transparency and trust.</span></li>
+                            </ul>
+                        </div>
+                        <!-- Service Card 4: Export & Import Management -->
+                        <div class="service-card">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4">
+                                    <i data-lucide="ship" class="w-6 h-6 text-amber-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800">Export & Import Management</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">I manage the entire export and import process, including customs, transportation, insurance, and currency transactions.</p>
+                             <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Reduced costs and time.</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Assurance of compliance with regulations.</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Increased efficiency in supply chain.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Service Card 5: Specialized Consulting -->
+                    <div class="mt-8">
+                        <div class="service-card">
+                             <div class="flex flex-col md:flex-row md:items-center">
+                                <div class="flex-shrink-0 w-24 h-24 bg-rose-100 rounded-full flex items-center justify-center mr-0 mb-4 md:mr-6 md:mb-0">
+                                    <i data-lucide="lightbulb" class="w-12 h-12 text-rose-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Specialized Consulting</h3>
+                                    <p class="text-gray-600 mb-4">My team provides specialized consulting on international laws, quality standards, and technical requirements to ensure your success.</p>
+                                    <ul class="space-y-2 text-gray-600 sm:flex sm:space-y-0 sm:space-x-6">
+                                        <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Access to up-to-date expertise.</span></li>
+                                        <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Improved product quality.</span></li>
+                                        <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Reduced compliance risks.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Resume Section -->
-            <section id="resume" class="min-h-screen flex items-center p-6 lg:p-16">
+            <section id="resume" class="min-h-screen flex items-center p-6 lg:p-16 bg-white">
                 <div class="max-w-4xl mx-auto w-full">
                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-12 flex items-center">
                         <i data-lucide="file-text" class="w-8 h-8 mr-3 text-blue-500"></i>
@@ -217,22 +307,18 @@
                 </div>
             </section>
 
-            <!-- Blog Section -->
-            <section id="blog" class="min-h-screen p-6 lg:p-16 bg-white">
+            <!-- BLOG SECTION: Updated with new filter and limited posts -->
+            <section id="blog" class="min-h-screen p-6 lg:p-16">
                 <div class="max-w-6xl mx-auto w-full">
                     <div class="flex flex-col md:flex-row justify-between md:items-center mb-12">
                         <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 flex items-center mb-6 md:mb-0">
                             <i data-lucide="rss" class="w-8 h-8 mr-3 text-blue-500"></i>
                             From The Blog
                         </h2>
-                        <!-- Filter Controls -->
-                        <div id="blog-filters" class="flex">
-                            <div class="w-full sm:w-auto">
-                                <select id="sort-filter" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 bg-white">
-                                    <option value="newest">Newest First</option>
-                                    <option value="oldest">Oldest First</option>
-                                </select>
-                            </div>
+                        <!-- BLOG FILTER: New creative filter design -->
+                        <div id="blog-filters" class="flex space-x-1 bg-gray-100 p-1 rounded-full">
+                            <button data-sort="newest" class="sort-btn active">Most Recent</button>
+                            <button data-sort="oldest" class="sort-btn">Oldest First</button>
                         </div>
                     </div>
                     <div id="blog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -241,28 +327,37 @@
                 </div>
             </section>
 
-            <!-- Contact Section -->
-            <section id="contact" class="min-h-screen flex items-center p-6 lg:p-16">
+            <!-- CONTACT SECTION: Upgraded for Netlify Forms -->
+            <section id="contact" class="min-h-screen flex items-center p-6 lg:p-16 bg-white">
                 <div class="max-w-2xl mx-auto w-full">
                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-8 text-center">Get In Touch</h2>
                     <p class="text-center text-lg text-gray-600 mb-12">I'm open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out.</p>
-                    <form action="#" method="POST" class="space-y-6">
+                    
+                    <!-- Netlify Form: Added data-netlify="true" and a name attribute -->
+                    <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+                        <!-- Input for Netlify to identify the form -->
+                        <input type="hidden" name="form-name" value="contact" />
+                        
                         <div>
                             <label for="name" class="sr-only">Name</label>
-                            <input type="text" name="name" id="name" class="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-blue-500 focus:bg-white focus:ring-0" placeholder="Your Name">
+                            <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg bg-gray-100 border-2 border-transparent focus:border-blue-500 focus:bg-white focus:ring-0 transition" placeholder="Your Name">
                         </div>
                         <div>
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" class="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-blue-500 focus:bg-white focus:ring-0" placeholder="Your Email">
+                            <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-lg bg-gray-100 border-2 border-transparent focus:border-blue-500 focus:bg-white focus:ring-0 transition" placeholder="Your Email">
+                        </div>
+                        <div>
+                            <label for="subject" class="sr-only">Subject</label>
+                            <input type="text" name="subject" id="subject" required class="w-full px-4 py-3 rounded-lg bg-gray-100 border-2 border-transparent focus:border-blue-500 focus:bg-white focus:ring-0 transition" placeholder="Subject">
                         </div>
                         <div>
                             <label for="message" class="sr-only">Message</label>
-                            <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-blue-500 focus:bg-white focus:ring-0" placeholder="Your Message"></textarea>
+                            <textarea name="message" id="message" rows="5" required class="w-full px-4 py-3 rounded-lg bg-gray-100 border-2 border-transparent focus:border-blue-500 focus:bg-white focus:ring-0 transition" placeholder="Your Message"></textarea>
                         </div>
                         <div>
                             <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center">
                                 <i data-lucide="send" class="w-5 h-5 mr-2"></i>
-                                Send Message
+                                <span>Send Message</span>
                             </button>
                         </div>
                     </form>
@@ -303,7 +398,7 @@
                 id: '1', title: "AI's Role in Modernizing International Trade", category: "AI", date: "August 10, 2025",
                 image: "https://placehold.co/600x400/E2E8F0/4A5568?text=AI+in+Trade",
                 excerpt: "How artificial intelligence is reshaping supply chains and market analysis...",
-                content: `<p class="mb-4">Artificial intelligence (AI) is no longer a futuristic concept... [Full content here]</p>`
+                content: `<p class="mb-4">Artificial intelligence (AI) is no longer a futuristic concept in international trade; it's a present-day reality that is fundamentally reshaping how goods move across borders. From predictive analytics forecasting market demand to AI-powered platforms optimizing shipping routes in real-time, the technology is injecting unprecedented efficiency and intelligence into global supply chains.</p><p>One of the most significant impacts is in risk management. AI algorithms can analyze vast datasets, including geopolitical news, weather patterns, and market volatility, to predict potential disruptions. This allows traders to proactively reroute shipments, adjust inventory levels, and mitigate financial losses. Furthermore, AI is streamlining the cumbersome process of customs and compliance, using natural language processing to automate paperwork and ensure adherence to complex international regulations, saving both time and money.</p>`
             },
             {
                 id: '2', title: "Navigating Emerging Market Risks", category: "Analysis", date: "July 22, 2025",
@@ -328,6 +423,7 @@
                 image: "https://placehold.co/600x400/93c5fd/1e40af?text=Docs",
                 excerpt: "Exploring the shift from paper-based to digital documentation in international trade.",
                 content: "<p>Detailed content about digitalization of customs...</p>"
+ax
             },
         ];
 
@@ -337,13 +433,26 @@
             
             // --- Blog Sorting and Rendering ---
             const blogGrid = document.getElementById('blog-grid');
-            const sortFilter = document.getElementById('sort-filter');
+            const filterContainer = document.getElementById('blog-filters');
+            let currentSort = 'newest';
 
-            const renderPosts = (postsToRender) => {
+            const renderPosts = () => {
+                let sortedPosts = [...blogPosts];
+
+                // Sort by date
+                sortedPosts.sort((a, b) => {
+                    const dateA = new Date(a.date);
+                    const dateB = new Date(b.date);
+                    return currentSort === 'newest' ? dateB - dateA : dateA - dateB;
+                });
+                
+                // BLOG POSTS CHANGE: Display only the last 3 posts
+                const postsToRender = sortedPosts.slice(0, 3);
+
                 blogGrid.innerHTML = '';
                 postsToRender.forEach(post => {
                     const postCard = document.createElement('div');
-                    postCard.className = 'post-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300';
+                    postCard.className = 'post-card bg-white rounded-xl shadow-md overflow-hidden';
                     postCard.innerHTML = `
                         <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -355,32 +464,24 @@
                     `;
                     blogGrid.appendChild(postCard);
                 });
-                // Re-attach event listeners for modal
                 attachModalListeners();
             };
 
-            const applySort = () => {
-                const sortBy = sortFilter.value;
-                let sortedPosts = [...blogPosts];
-
-                // Sort by date
-                sortedPosts.sort((a, b) => {
-                    const dateA = new Date(a.date);
-                    const dateB = new Date(b.date);
-                    return sortBy === 'newest' ? dateB - dateA : dateA - dateB;
-                });
-                
-                renderPosts(sortedPosts);
-            };
-
-            sortFilter.addEventListener('change', applySort);
+            filterContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('sort-btn')) {
+                    currentSort = e.target.dataset.sort;
+                    filterContainer.querySelector('.sort-btn.active').classList.remove('active');
+                    e.target.classList.add('active');
+                    renderPosts();
+                }
+            });
             
             // Initial render
-            applySort();
-
+            renderPosts();
 
             // --- Intersection Observer for Active Nav Link ---
-            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
+            // MOBILE NAV FIX: Lowered threshold for better detection on small screens
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.3 };
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -449,6 +550,9 @@
                     closeModal();
                 }
             });
+
+            // Note: The JavaScript logic for form submission has been removed.
+            // Netlify will handle the form submission automatically because of the `data-netlify="true"` attribute in the HTML form tag.
         });
     </script>
 </body>
