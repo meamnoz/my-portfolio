@@ -2,9 +2,9 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const path = require('path');
-const { PrismaClient } = require('@prisma/client');
+// *** FIX: Import the single, shared Prisma Client instance ***
+const prisma = require('../prisma/client');
 
-const prisma = new PrismaClient();
 const router = express.Router();
 
 // Middleware for checking if user is authenticated
@@ -31,13 +31,18 @@ router.get('/login', (req, res) => {
 
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
-    const user = await prisma.user.findUnique({ where: { email } });
+    try {
+        const user = await prisma.user.findUnique({ where: { email } });
 
-    if (user && await bcrypt.compare(password, user.password)) {
-        req.session.userId = user.id;
-        res.redirect('/admin/posts');
-    } else {
-        res.render('admin/login', { error: 'Invalid email or password.' });
+        if (user && await bcrypt.compare(password, user.password)) {
+            req.session.userId = user.id;
+            res.redirect('/admin/posts');
+        } else {
+            res.render('admin/login', { error: 'Invalid email or password.' });
+        }
+    } catch (error) {
+        console.error("Login error:", error);
+        res.render('admin/login', { error: 'A database error occurred.' });
     }
 });
 
