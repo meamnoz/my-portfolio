@@ -6,19 +6,11 @@
     <meta name="description" content="Personal website of Meysam Norouzi, active in the field of international trade and the implementation of artificial intelligence in commerce.">
     <title>Meysam Norouzi - International Trader</title>
     <link rel="icon" type="image/png" href="logo-icon.png">
-<<<<<<< HEAD
-    
-    <link href="./dist/output.css" rel="stylesheet">
-    
-=======
     <script src="https://cdn.tailwindcss.com"></script>
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
-    
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -53,11 +45,7 @@
         }
         section {
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-<<<<<<< HEAD
-            padding-top: 5rem;
-=======
             padding-top: 5rem; /* Increased padding for mobile header */
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
             padding-bottom: 4rem;
         }
         .modal {
@@ -67,7 +55,7 @@
             transition: transform 0.3s ease;
         }
         .logo-container {
-            background-color: #001f3f;
+            background-color: #001f3f; /* Deep navy blue */
         }
         .post-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -76,10 +64,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             transform: translateY(-5px);
         }
-<<<<<<< HEAD
-=======
         /* New Blog Filter Styles */
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
         .sort-btn {
             padding: 0.5rem 1rem;
             border-radius: 9999px;
@@ -93,10 +78,7 @@
             color: #007bff;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
-<<<<<<< HEAD
-=======
         /* New Service Card Styles */
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
         .service-card {
             background-color: #ffffff;
             border-radius: 1rem;
@@ -113,15 +95,19 @@
 </head>
 <body class="antialiased">
 
+    <!-- Main Container -->
     <div class="lg:flex">
 
+        <!-- Sidebar Navigation (Desktop) -->
         <header class="hidden lg:block lg:w-24 lg:h-screen lg:fixed lg:top-0 lg:left-0 lg:flex lg:flex-col lg:items-center p-4 z-50">
+            <!-- Logo -->
             <a href="#home" class="mb-8">
                 <!-- LOGO BORDER CHANGE: Image width/height adjusted for a thinner border -->
                 <div class="w-16 h-16 rounded-full logo-container flex items-center justify-center shadow-lg">
                     <img src="logo mn.jpg" alt="Logo" class="w-[3.75rem] h-[3.75rem] rounded-full object-cover">
                 </div>
             </a>
+            <!-- Navigation -->
             <nav class="glass-effect w-16 rounded-full shadow-lg">
                 <ul class="flex flex-col items-center justify-center space-y-2 py-4" id="desktop-nav">
                     <li><a href="#home" data-section="home" class="nav-link flex flex-col items-center p-3 rounded-full transition-all duration-300 hover:bg-gray-200" title="Home"><i data-lucide="home" class="w-6 h-6 text-gray-600"></i></a></li>
@@ -134,6 +120,7 @@
             </nav>
         </header>
         
+        <!-- Mobile Header with Logo -->
         <div class="lg:hidden fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm shadow-sm p-4 z-50 flex items-center">
              <a href="#home">
                 <!-- LOGO BORDER CHANGE: Image width/height adjusted for a thinner border -->
@@ -144,12 +131,10 @@
             <h1 class="text-xl font-bold text-gray-800 ml-4">Meysam Norouzi</h1>
         </div>
 
-<<<<<<< HEAD
-=======
         <!-- Main Content -->
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
         <main class="lg:ml-24 flex-1">
             
+            <!-- Home Section -->
             <section id="home" class="min-h-screen flex items-center justify-center p-6 lg:p-12 bg-white">
                 <div class="text-center">
                     <h1 class="text-4xl lg:text-6xl font-bold text-gray-800">Meysam Norouzi</h1>
@@ -163,6 +148,7 @@
                 </div>
             </section>
 
+            <!-- About Section -->
             <section id="about" class="min-h-screen flex items-center p-6 lg:p-16">
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-8 flex items-center">
@@ -177,10 +163,7 @@
                 </div>
             </section>
 
-<<<<<<< HEAD
-=======
             <!-- SERVICES SECTION: Completely redesigned with new content -->
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
             <section id="services" class="min-h-screen p-6 lg:p-16 bg-gray-50">
                 <div class="max-w-5xl mx-auto w-full">
                     <div class="text-center mb-16">
@@ -191,10 +174,7 @@
                         <p class="text-lg text-gray-600 max-w-2xl mx-auto">In today's world, businesses require specialized services to succeed in international markets. I provide a diverse range to help you achieve your objectives.</p>
                     </div>
                     <div class="grid md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-=======
                         <!-- Service Card 1: Export Marketing -->
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
                         <div class="service-card">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
@@ -209,10 +189,7 @@
                                 <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Reduced risks associated with market entry.</span></li>
                             </ul>
                         </div>
-<<<<<<< HEAD
-=======
                         <!-- Service Card 2: Correspondence & Negotiation -->
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
                         <div class="service-card">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
@@ -227,12 +204,8 @@
                                 <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Reduced commercial risks.</span></li>
                             </ul>
                         </div>
-<<<<<<< HEAD
-                         <div class="service-card">
-=======
                          <!-- Service Card 3: Legal Affairs -->
                         <div class="service-card">
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
                                     <i data-lucide="gavel" class="w-6 h-6 text-indigo-600"></i>
@@ -246,10 +219,7 @@
                                 <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Increased transparency and trust.</span></li>
                             </ul>
                         </div>
-<<<<<<< HEAD
-=======
                         <!-- Service Card 4: Export & Import Management -->
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
                         <div class="service-card">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4">
@@ -265,12 +235,8 @@
                             </ul>
                         </div>
                     </div>
-<<<<<<< HEAD
-                     <div class="mt-8">
-=======
                      <!-- Service Card 5: Specialized Consulting -->
                     <div class="mt-8">
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
                         <div class="service-card">
                              <div class="flex flex-col md:flex-row md:items-center">
                                 <div class="flex-shrink-0 w-24 h-24 bg-rose-100 rounded-full flex items-center justify-center mr-0 mb-4 md:mr-6 md:mb-0">
@@ -291,10 +257,7 @@
                 </div>
             </section>
 
-<<<<<<< HEAD
-=======
             <!-- Resume Section -->
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
             <section id="resume" class="min-h-screen flex items-center p-6 lg:p-16 bg-white">
                 <div class="max-w-4xl mx-auto w-full">
                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-12 flex items-center">
@@ -302,6 +265,7 @@
                         Resume
                     </h2>
                     <div class="grid md:grid-cols-2 gap-12">
+                        <!-- Experience Column -->
                         <div>
                             <h3 class="text-2xl font-semibold text-gray-700 mb-6 flex items-center"><i data-lucide="briefcase" class="w-6 h-6 mr-2"></i>Experience</h3>
                             <div class="relative border-l-2 border-blue-200 pl-6 space-y-10">
@@ -321,6 +285,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Education Column -->
                         <div>
                             <h3 class="text-2xl font-semibold text-gray-700 mb-6 flex items-center"><i data-lucide="graduation-cap" class="w-6 h-6 mr-2"></i>Education</h3>
                             <div class="relative border-l-2 border-blue-200 pl-6 space-y-10">
@@ -342,10 +307,7 @@
                 </div>
             </section>
 
-<<<<<<< HEAD
-=======
             <!-- BLOG SECTION: Updated with new filter and limited posts -->
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
             <section id="blog" class="min-h-screen p-6 lg:p-16">
                 <div class="max-w-6xl mx-auto w-full">
                     <div class="flex flex-col md:flex-row justify-between md:items-center mb-12">
@@ -353,39 +315,29 @@
                             <i data-lucide="rss" class="w-8 h-8 mr-3 text-blue-500"></i>
                             From The Blog
                         </h2>
-<<<<<<< HEAD
-=======
                         <!-- BLOG FILTER: New creative filter design -->
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
                         <div id="blog-filters" class="flex space-x-1 bg-gray-100 p-1 rounded-full">
                             <button data-sort="newest" class="sort-btn active">Most Recent</button>
                             <button data-sort="oldest" class="sort-btn">Oldest First</button>
                         </div>
                     </div>
                     <div id="blog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        </div>
+                        <!-- Blog Post Cards will be dynamically inserted here -->
+                    </div>
                 </div>
             </section>
 
-<<<<<<< HEAD
-=======
             <!-- CONTACT SECTION: Upgraded for Netlify Forms -->
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
             <section id="contact" class="min-h-screen flex items-center p-6 lg:p-16 bg-white">
                 <div class="max-w-2xl mx-auto w-full">
                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-8 text-center">Get In Touch</h2>
                     <p class="text-center text-lg text-gray-600 mb-12">I'm open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out.</p>
                     
-<<<<<<< HEAD
-                    <form name="contact" method="POST" data-netlify="true" class="space-y-6">
-                        <input type="hidden" name="form-name" value="contact" />
-=======
                     <!-- Netlify Form: Added data-netlify="true" and a name attribute -->
                     <form name="contact" method="POST" data-netlify="true" class="space-y-6">
                         <!-- Input for Netlify to identify the form -->
                         <input type="hidden" name="form-name" value="contact" />
                         
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
                         <div>
                             <label for="name" class="sr-only">Name</label>
                             <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg bg-gray-100 border-2 border-transparent focus:border-blue-500 focus:bg-white focus:ring-0 transition" placeholder="Your Name">
@@ -413,6 +365,7 @@
             </section>
         </main>
 
+        <!-- Bottom Navigation (Mobile) -->
         <footer class="lg:hidden fixed bottom-0 left-0 right-0 h-16 z-50">
             <nav class="glass-effect w-full h-full shadow-lg rounded-t-2xl">
                 <ul class="flex items-center justify-around h-full" id="mobile-nav">
@@ -427,9 +380,11 @@
         </footer>
     </div>
 
+    <!-- Blog Post Modal -->
     <div id="blog-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[100] hidden opacity-0">
         <div id="modal-content" class="modal-content bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95">
-            </div>
+            <!-- Modal content will be injected here by JavaScript -->
+        </div>
     </div>
 
 
@@ -475,28 +430,23 @@ ax
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
+            
+            // --- Blog Sorting and Rendering ---
             const blogGrid = document.getElementById('blog-grid');
             const filterContainer = document.getElementById('blog-filters');
             let currentSort = 'newest';
 
             const renderPosts = () => {
-<<<<<<< HEAD
-                let sortedPosts = [...blogPosts].sort((a, b) => {
-=======
                 let sortedPosts = [...blogPosts];
 
                 // Sort by date
                 sortedPosts.sort((a, b) => {
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
                     const dateA = new Date(a.date);
                     const dateB = new Date(b.date);
                     return currentSort === 'newest' ? dateB - dateA : dateA - dateB;
                 });
                 
-<<<<<<< HEAD
-=======
                 // BLOG POSTS CHANGE: Display only the last 3 posts
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
                 const postsToRender = sortedPosts.slice(0, 3);
 
                 blogGrid.innerHTML = '';
@@ -517,23 +467,6 @@ ax
                 attachModalListeners();
             };
 
-<<<<<<< HEAD
-            if (filterContainer) {
-                filterContainer.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('sort-btn')) {
-                        currentSort = e.target.dataset.sort;
-                        filterContainer.querySelector('.sort-btn.active').classList.remove('active');
-                        e.target.classList.add('active');
-                        renderPosts();
-                    }
-                });
-            }
-            
-            if (blogGrid) {
-                renderPosts();
-            }
-
-=======
             filterContainer.addEventListener('click', (e) => {
                 if (e.target.classList.contains('sort-btn')) {
                     currentSort = e.target.dataset.sort;
@@ -548,7 +481,6 @@ ax
 
             // --- Intersection Observer for Active Nav Link ---
             // MOBILE NAV FIX: Lowered threshold for better detection on small screens
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
             const observerOptions = { root: null, rootMargin: '0px', threshold: 0.3 };
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -561,17 +493,16 @@ ax
                 });
             }, observerOptions);
             sections.forEach(section => observer.observe(section));
-            const homeLink = document.querySelector('.nav-link[data-section="home"]');
-            if (homeLink) {
-                homeLink.classList.add('active');
-            }
+            document.querySelector('.nav-link[data-section="home"]').classList.add('active');
 
+
+            // --- Blog Modal Logic ---
             const modal = document.getElementById('blog-modal');
             const modalContent = document.getElementById('modal-content');
             
             const openModal = (postId) => {
                 const post = blogPosts.find(p => p.id === postId);
-                if (!post || !modal || !modalContent) return;
+                if (!post) return;
 
                 modalContent.innerHTML = `
                     <div class="p-6 md:p-10">
@@ -594,14 +525,10 @@ ax
                 }, 10); 
                 document.body.style.overflow = 'hidden';
 
-                const closeModalBtn = document.getElementById('close-modal-btn');
-                if(closeModalBtn) {
-                    closeModalBtn.addEventListener('click', closeModal);
-                }
+                document.getElementById('close-modal-btn').addEventListener('click', closeModal);
             };
 
             const closeModal = () => {
-                if (!modal || !modalContent) return;
                 modal.classList.add('opacity-0');
                 modalContent.classList.add('scale-95');
                 setTimeout(() => {
@@ -618,15 +545,6 @@ ax
                 });
             }
 
-<<<<<<< HEAD
-            if (modal) {
-                modal.addEventListener('click', (event) => {
-                    if (event.target === modal) {
-                        closeModal();
-                    }
-                });
-            }
-=======
             modal.addEventListener('click', (event) => {
                 if (event.target === modal) {
                     closeModal();
@@ -635,7 +553,6 @@ ax
 
             // Note: The JavaScript logic for form submission has been removed.
             // Netlify will handle the form submission automatically because of the `data-netlify="true"` attribute in the HTML form tag.
->>>>>>> e5bca06fc5dcbb3da5b63463a7fd6402507c2ca9
         });
     </script>
 </body>
