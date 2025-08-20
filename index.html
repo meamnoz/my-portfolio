@@ -6,11 +6,15 @@
     <meta name="description" content="Personal website of Meysam Norouzi, active in the field of international trade and the implementation of artificial intelligence in commerce.">
     <title>Meysam Norouzi - International Trader</title>
     <link rel="icon" type="image/png" href="logo-icon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="./dist/output.css" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -45,7 +49,7 @@
         }
         section {
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-            padding-top: 5rem; /* Increased padding for mobile header */
+            padding-top: 5rem;
             padding-bottom: 4rem;
         }
         .modal {
@@ -55,7 +59,7 @@
             transition: transform 0.3s ease;
         }
         .logo-container {
-            background-color: #001f3f; /* Deep navy blue */
+            background-color: #001f3f;
         }
         .post-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -64,7 +68,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             transform: translateY(-5px);
         }
-        /* New Blog Filter Styles */
         .sort-btn {
             padding: 0.5rem 1rem;
             border-radius: 9999px;
@@ -78,7 +81,6 @@
             color: #007bff;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
-        /* New Service Card Styles */
         .service-card {
             background-color: #ffffff;
             border-radius: 1rem;
@@ -95,10 +97,8 @@
 </head>
 <body class="antialiased">
 
-    <!-- Main Container -->
     <div class="lg:flex">
 
-        <!-- Sidebar Navigation (Desktop) -->
         <header class="hidden lg:block lg:w-24 lg:h-screen lg:fixed lg:top-0 lg:left-0 lg:flex lg:flex-col lg:items-center p-4 z-50">
             <a href="#home" class="mb-8">
                 <div class="w-16 h-16 rounded-full logo-container flex items-center justify-center shadow-lg">
@@ -117,7 +117,6 @@
             </nav>
         </header>
         
-        <!-- Mobile Header with Logo -->
         <div class="lg:hidden fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm shadow-sm p-4 z-50 flex items-center">
              <a href="#home">
                 <div class="w-12 h-12 rounded-full logo-container flex items-center justify-center shadow-lg">
@@ -127,10 +126,8 @@
             <h1 class="text-xl font-bold text-gray-800 ml-4">Meysam Norouzi</h1>
         </div>
 
-        <!-- Main Content -->
         <main class="lg:ml-24 flex-1">
             
-            <!-- Sections: Home, About, Services, Resume, Blog -->
             <section id="home" class="min-h-screen flex items-center justify-center p-6 lg:p-12 bg-white">
                 <div class="text-center">
                     <h1 class="text-4xl lg:text-6xl font-bold text-gray-800">Meysam Norouzi</h1>
@@ -196,7 +193,7 @@
                                 <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-1"></i><span>Reduced commercial risks.</span></li>
                             </ul>
                         </div>
-                        <div class="service-card">
+                         <div class="service-card">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
                                     <i data-lucide="gavel" class="w-6 h-6 text-indigo-600"></i>
@@ -225,7 +222,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="mt-8">
+                     <div class="mt-8">
                         <div class="service-card">
                              <div class="flex flex-col md:flex-row md:items-center">
                                 <div class="flex-shrink-0 w-24 h-24 bg-rose-100 rounded-full flex items-center justify-center mr-0 mb-4 md:mr-6 md:mb-0">
@@ -306,20 +303,17 @@
                         </div>
                     </div>
                     <div id="blog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Blog Post Cards will be dynamically inserted here -->
-                    </div>
+                        </div>
                 </div>
             </section>
 
-            <!-- CONTACT SECTION -->
             <section id="contact" class="min-h-screen flex items-center p-6 lg:p-16 bg-white">
                 <div class="max-w-2xl mx-auto w-full">
                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-8 text-center">Get In Touch</h2>
                     <p class="text-center text-lg text-gray-600 mb-12">I'm open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out.</p>
                     
-                    <form id="contact-form" name="contact" method="POST" data-netlify="true" class="space-y-6">
+                    <form name="contact" method="POST" data-netlify="true" class="space-y-6">
                         <input type="hidden" name="form-name" value="contact" />
-                        
                         <div>
                             <label for="name" class="sr-only">Name</label>
                             <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg bg-gray-100 border-2 border-transparent focus:border-blue-500 focus:bg-white focus:ring-0 transition" placeholder="Your Name">
@@ -337,9 +331,9 @@
                             <textarea name="message" id="message" rows="5" required class="w-full px-4 py-3 rounded-lg bg-gray-100 border-2 border-transparent focus:border-blue-500 focus:bg-white focus:ring-0 transition" placeholder="Your Message"></textarea>
                         </div>
                         <div>
-                            <button type="submit" id="submit-btn" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400">
+                            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center">
                                 <i data-lucide="send" class="w-5 h-5 mr-2"></i>
-                                <span id="submit-btn-text">Send Message</span>
+                                <span>Send Message</span>
                             </button>
                         </div>
                     </form>
@@ -347,7 +341,6 @@
             </section>
         </main>
 
-        <!-- Bottom Navigation (Mobile) -->
         <footer class="lg:hidden fixed bottom-0 left-0 right-0 h-16 z-50">
             <nav class="glass-effect w-full h-full shadow-lg rounded-t-2xl">
                 <ul class="flex items-center justify-around h-full" id="mobile-nav">
@@ -362,55 +355,66 @@
         </footer>
     </div>
 
-    <!-- Blog Post Modal -->
     <div id="blog-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[100] hidden opacity-0">
         <div id="modal-content" class="modal-content bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95">
-            <!-- Modal content will be injected here by JavaScript -->
-        </div>
-    </div>
-
-    <!-- Success Modal -->
-    <div id="success-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[100] hidden opacity-0">
-        <div id="success-modal-content" class="modal-content bg-white p-10 rounded-xl shadow-lg text-center max-w-md mx-auto transform scale-95">
-            <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <h1 class="text-2xl font-bold text-gray-800 mb-2">Thank You!</h1>
-            <p class="text-gray-600 mb-6">Your message has been sent successfully. I will get back to you soon.</p>
-            <button id="close-success-modal-btn" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">
-                Close
-            </button>
-        </div>
+            </div>
     </div>
 
 
     <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mock Blog Post Data
+        const blogPosts = [
+            {
+                id: '1', title: "AI's Role in Modernizing International Trade", category: "AI", date: "August 10, 2025",
+                image: "https://placehold.co/600x400/E2E8F0/4A5568?text=AI+in+Trade",
+                excerpt: "How artificial intelligence is reshaping supply chains and market analysis...",
+                content: `<p class="mb-4">Artificial intelligence (AI) is no longer a futuristic concept in international trade; it's a present-day reality that is fundamentally reshaping how goods move across borders. From predictive analytics forecasting market demand to AI-powered platforms optimizing shipping routes in real-time, the technology is injecting unprecedented efficiency and intelligence into global supply chains.</p><p>One of the most significant impacts is in risk management. AI algorithms can analyze vast datasets, including geopolitical news, weather patterns, and market volatility, to predict potential disruptions. This allows traders to proactively reroute shipments, adjust inventory levels, and mitigate financial losses. Furthermore, AI is streamlining the cumbersome process of customs and compliance, using natural language processing to automate paperwork and ensure adherence to complex international regulations, saving both time and money.</p>`
+            },
+            {
+                id: '2', title: "Navigating Emerging Market Risks", category: "Analysis", date: "July 22, 2025",
+                image: "https://placehold.co/600x400/D1D5DB/374151?text=Market",
+                excerpt: "A deep dive into the political and economic risks in today's top emerging markets...",
+                content: "<p>Content for the second blog post about navigating emerging market risks...</p>"
+            },
+            {
+                id: '3', title: "Sustainable Supply Chains: A New Imperative", category: "Logistics", date: "July 01, 2025",
+                image: "https://placehold.co/600x400/9CA3AF/1F2937?text=Logistics",
+                excerpt: "How green logistics is becoming a key competitive advantage in international trade...",
+                content: "<p>Content for the third blog post about sustainable supply chains...</p>"
+            },
+            {
+                id: '4', title: "The Impact of Trade Agreements on Global Commerce", category: "Policy", date: "June 15, 2025",
+                image: "https://placehold.co/600x400/a5b4fc/1e3a8a?text=Policy",
+                excerpt: "An overview of recent trade agreements and their potential effects on global markets.",
+                content: "<p>Detailed content about trade agreements...</p>"
+            },
+            {
+                id: '5', title: "Digitalization of Customs and Trade Documentation", category: "Technology", date: "May 30, 2025",
+                image: "https://placehold.co/600x400/93c5fd/1e40af?text=Docs",
+                excerpt: "Exploring the shift from paper-based to digital documentation in international trade.",
+                content: "<p>Detailed content about digitalization of customs...</p>"
+            },
+        ];
+
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize Lucide icons
-            lucide.createIcons();
-
-            // Mock Blog Post Data
-            const blogPosts = [
-                { id: '1', title: "AI's Role in Modernizing International Trade", category: "AI", date: "August 10, 2025", image: "https://placehold.co/600x400/E2E8F0/4A5568?text=AI+in+Trade", excerpt: "How artificial intelligence is reshaping supply chains and market analysis...", content: `<p class="mb-4">Artificial intelligence (AI) is no longer a futuristic concept in international trade; it's a present-day reality that is fundamentally reshaping how goods move across borders. From predictive analytics forecasting market demand to AI-powered platforms optimizing shipping routes in real-time, the technology is injecting unprecedented efficiency and intelligence into global supply chains.</p><p>One of the most significant impacts is in risk management. AI algorithms can analyze vast datasets, including geopolitical news, weather patterns, and market volatility, to predict potential disruptions. This allows traders to proactively reroute shipments, adjust inventory levels, and mitigate financial losses. Furthermore, AI is streamlining the cumbersome process of customs and compliance, using natural language processing to automate paperwork and ensure adherence to complex international regulations, saving both time and money.</p>` },
-                { id: '2', title: "Navigating Emerging Market Risks", category: "Analysis", date: "July 22, 2025", image: "https://placehold.co/600x400/D1D5DB/374151?text=Market", excerpt: "A deep dive into the political and economic risks in today's top emerging markets...", content: "<p>Content for the second blog post about navigating emerging market risks...</p>" },
-                { id: '3', title: "Sustainable Supply Chains: A New Imperative", category: "Logistics", date: "July 01, 2025", image: "https://placehold.co/600x400/9CA3AF/1F2937?text=Logistics", excerpt: "How green logistics is becoming a key competitive advantage in international trade...", content: "<p>Content for the third blog post about sustainable supply chains...</p>" },
-                { id: '4', title: "The Impact of Trade Agreements on Global Commerce", category: "Policy", date: "June 15, 2025", image: "https://placehold.co/600x400/a5b4fc/1e3a8a?text=Policy", excerpt: "An overview of recent trade agreements and their potential effects on global markets.", content: "<p>Detailed content about trade agreements...</p>" },
-                { id: '5', title: "Digitalization of Customs and Trade Documentation", category: "Technology", date: "May 30, 2025", image: "https://placehold.co/600x400/93c5fd/1e40af?text=Docs", excerpt: "Exploring the shift from paper-based to digital documentation in international trade.", content: "<p>Detailed content about digitalization of customs...</p>" },
-            ];
-
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
-            
-            // --- Blog Logic ---
             const blogGrid = document.getElementById('blog-grid');
             const filterContainer = document.getElementById('blog-filters');
             let currentSort = 'newest';
 
             const renderPosts = () => {
-                let sortedPosts = [...blogPosts];
-                sortedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
-                if (currentSort === 'oldest') {
-                    sortedPosts.reverse();
-                }
+                let sortedPosts = [...blogPosts].sort((a, b) => {
+                    const dateA = new Date(a.date);
+                    const dateB = new Date(b.date);
+                    return currentSort === 'newest' ? dateB - dateA : dateA - dateB;
+                });
+                
                 const postsToRender = sortedPosts.slice(0, 3);
+
                 blogGrid.innerHTML = '';
                 postsToRender.forEach(post => {
                     const postCard = document.createElement('div');
@@ -429,17 +433,21 @@
                 attachModalListeners();
             };
 
-            filterContainer.addEventListener('click', (e) => {
-                if (e.target.tagName === 'BUTTON') {
-                    currentSort = e.target.dataset.sort;
-                    filterContainer.querySelector('.active').classList.remove('active');
-                    e.target.classList.add('active');
-                    renderPosts();
-                }
-            });
-            renderPosts();
+            if (filterContainer) {
+                filterContainer.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('sort-btn')) {
+                        currentSort = e.target.dataset.sort;
+                        filterContainer.querySelector('.sort-btn.active').classList.remove('active');
+                        e.target.classList.add('active');
+                        renderPosts();
+                    }
+                });
+            }
+            
+            if (blogGrid) {
+                renderPosts();
+            }
 
-            // --- Intersection Observer for Active Nav Link ---
             const observerOptions = { root: null, rootMargin: '0px', threshold: 0.3 };
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -452,26 +460,49 @@
                 });
             }, observerOptions);
             sections.forEach(section => observer.observe(section));
-            document.querySelector('.nav-link[data-section="home"]').classList.add('active');
+            const homeLink = document.querySelector('.nav-link[data-section="home"]');
+            if (homeLink) {
+                homeLink.classList.add('active');
+            }
 
-            // --- Generic Modal Logic ---
-            const blogModal = document.getElementById('blog-modal');
-            const blogModalContent = document.getElementById('modal-content');
-            const successModal = document.getElementById('success-modal');
-            const successModalContent = document.getElementById('success-modal-content');
+            const modal = document.getElementById('blog-modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            const openModal = (postId) => {
+                const post = blogPosts.find(p => p.id === postId);
+                if (!post || !modal || !modalContent) return;
 
-            const openModal = (modal, content) => {
+                modalContent.innerHTML = `
+                    <div class="p-6 md:p-10">
+                        <div class="flex justify-between items-start mb-4">
+                             <div>
+                                <h2 class="text-2xl md:text-3xl font-bold text-gray-800">${post.title}</h2>
+                                <p class="text-sm text-gray-500 mt-2">${post.category} • ${post.date}</p>
+                            </div>
+                            <button id="close-modal-btn" class="text-gray-400 hover:text-gray-800 text-4xl leading-none">&times;</button>
+                        </div>
+                        <img src="${post.image.replace('600x400', '800x400')}" alt="${post.title}" class="w-full h-auto rounded-lg my-6">
+                        <div class="text-gray-600 leading-relaxed">${post.content}</div>
+                    </div>
+                `;
+                
                 modal.classList.remove('hidden');
                 setTimeout(() => {
                     modal.classList.remove('opacity-0');
-                    content.classList.remove('scale-95');
-                }, 10);
+                    modalContent.classList.remove('scale-95');
+                }, 10); 
                 document.body.style.overflow = 'hidden';
+
+                const closeModalBtn = document.getElementById('close-modal-btn');
+                if(closeModalBtn) {
+                    closeModalBtn.addEventListener('click', closeModal);
+                }
             };
 
-            const closeModal = (modal, content) => {
+            const closeModal = () => {
+                if (!modal || !modalContent) return;
                 modal.classList.add('opacity-0');
-                content.classList.add('scale-95');
+                modalContent.classList.add('scale-95');
                 setTimeout(() => {
                     modal.classList.add('hidden');
                 }, 300);
@@ -481,67 +512,18 @@
             function attachModalListeners() {
                 document.querySelectorAll('.read-more-btn').forEach(button => {
                     button.addEventListener('click', () => {
-                        const postId = button.dataset.postId;
-                        const post = blogPosts.find(p => p.id === postId);
-                        if (!post) return;
-                        blogModalContent.innerHTML = `
-                            <div class="p-6 md:p-10">
-                                <div class="flex justify-between items-start mb-4">
-                                     <div>
-                                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800">${post.title}</h2>
-                                        <p class="text-sm text-gray-500 mt-2">${post.category} • ${post.date}</p>
-                                    </div>
-                                    <button class="close-modal-btn text-gray-400 hover:text-gray-800 text-4xl leading-none">&times;</button>
-                                </div>
-                                <img src="${post.image.replace('600x400', '800x400')}" alt="${post.title}" class="w-full h-auto rounded-lg my-6">
-                                <div class="text-gray-600 leading-relaxed">${post.content}</div>
-                            </div>
-                        `;
-                        openModal(blogModal, blogModalContent);
+                        openModal(button.dataset.postId);
                     });
                 });
             }
-            
-            blogModal.addEventListener('click', (e) => {
-                if (e.target === blogModal || e.target.classList.contains('close-modal-btn')) {
-                    closeModal(blogModal, blogModalContent);
-                }
-            });
 
-            document.getElementById('close-success-modal-btn').addEventListener('click', () => {
-                closeModal(successModal, successModalContent);
-            });
-
-            // --- Netlify AJAX Form Submission ---
-            const contactForm = document.getElementById('contact-form');
-            const submitBtn = document.getElementById('submit-btn');
-            const submitBtnText = document.getElementById('submit-btn-text');
-
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                submitBtn.disabled = true;
-                submitBtnText.textContent = 'Sending...';
-
-                const formData = new FormData(contactForm);
-                fetch('/', {
-                    method: 'POST',
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams(formData).toString()
-                })
-                .then(() => {
-                    contactForm.reset();
-                    openModal(successModal, successModalContent);
-                })
-                .catch((error) => {
-                    alert('An error occurred. Please try again.');
-                    console.error(error);
-                })
-                .finally(() => {
-                    submitBtn.disabled = false;
-                    submitBtnText.textContent = 'Send Message';
+            if (modal) {
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        closeModal();
+                    }
                 });
-            });
+            }
         });
     </script>
 </body>
