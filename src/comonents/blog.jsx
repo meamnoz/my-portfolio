@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Rss } from 'lucide-react';
+import { LuRss as Rss } from 'react-icons/lu';
 
 // Mock Blog Post Data
 const allPosts = [
@@ -7,7 +7,8 @@ const allPosts = [
     { id: '2', title: "Navigating Emerging Market Risks", category: "Analysis", date: "2025-07-22", image: "https://placehold.co/600x400/D1D5DB/374151?text=Market", excerpt: "A deep dive into the political and economic risks in today's top emerging markets...", content: "<p>... Detailed Content ...</p>" },
     { id: '3', title: "Sustainable Supply Chains: A New Imperative", category: "Logistics", date: "2025-07-01", image: "https://placehold.co/600x400/9CA3AF/1F2937?text=Logistics", excerpt: "How green logistics is becoming a key competitive advantage in international trade...", content: "<p>... Detailed Content ...</p>" },
     { id: '4', title: "The Impact of Trade Agreements on Global Commerce", category: "Policy", date: "2025-06-15", image: "https://placehold.co/600x400/a5b4fc/1e3a8a?text=Policy", excerpt: "An overview of recent trade agreements and their potential effects on global markets.", content: "<p>... Detailed Content ...</p>" },
-    { id: '5', title: "Digitalization of Customs and Trade Documentation", category: "Technology", date: "2025-05-30", image: "https://placehold.co/600x400/93c5fd/1e40af?text=Docs", excerpt: "Exploring the shift from paper-based to digital documentation in international trade.", content: "<p>... Detailed Content ...</p>" },
+    // رفع خطا: 'ax' اضافی از انتهای این رشته حذف شد
+    { id: '5', title: "Digitalization of Customs and Trade Documentation", category: "Technology", date: "2025-05-30", image: "https://placehold.co/600x400/93c5fd/1e40af?text=Docs", excerpt: "Exploring the shift from paper-based to digital documentation in international trade.", content: "<p>Detailed content about digitalization of customs...</p>" },
 ];
 
 const PostCard = ({ post }) => (

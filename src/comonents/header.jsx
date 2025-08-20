@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, UserCircle, Briefcase, FileText, Rss, Mail } from 'lucide-react';
+import { LuHome as Home, LuUserCircle as UserCircle, LuBriefcase as Briefcase, LuFileText as FileText, LuRss as Rss, LuMail as Mail } from 'react-icons/lu';
 
 const NavLink = ({ section, title, children, activeSection, onClick }) => (
   <li>
@@ -48,6 +48,7 @@ const Header = () => {
       <header className="hidden lg:block lg:w-24 lg:h-screen lg:fixed lg:top-0 lg:left-0 lg:flex lg:flex-col lg:items-center p-4 z-50">
         <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="mb-8">
           <div className="w-16 h-16 rounded-full bg-[#001f3f] flex items-center justify-center shadow-lg">
+            {/* مسیر لوگو اصلاح شده است */}
             <img src="/logo-mn.jpg" alt="Logo" className="w-[3.75rem] h-[3.75rem] rounded-full object-cover" />
           </div>
         </a>
@@ -67,6 +68,7 @@ const Header = () => {
       <div className="lg:hidden fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm shadow-sm p-4 z-50 flex items-center">
         <a href="#home" onClick={(e) => handleNavClick(e, 'home')}>
           <div className="w-12 h-12 rounded-full bg-[#001f3f] flex items-center justify-center shadow-lg">
+            {/* مسیر لوگو اصلاح شده است */}
             <img src="/logo-mn.jpg" alt="Logo" className="w-11 h-11 rounded-full object-cover" />
           </div>
         </a>
